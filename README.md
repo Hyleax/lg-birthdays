@@ -39,13 +39,13 @@
 
 ## **Sprint 1: Basic Group Creation and Notifications**  
 
-### **Frontend Tasks**  
-1. Create a user interface to input life group member details (name, date of birth, email).  
-2. Display a confirmation page for group creation.  
-3. Design a UI for viewing member profiles.  
+### **Frontend Tasks**    
+1. Design a rough UI template for message cards
+2. Design a UI for message cards with figma
+3. Design email tempalte for notification
 
 ### **Backend Tasks**  
-1. Create an API endpoint to save life group and member details.  
+1. Hardcode life group and member details.  
 2. Implement logic to check members’ dates of birth and identify if a notification needs to be sent.  
 3. Generate unique notification links for each email.  
 4. Integrate with an email service provider to send notifications.  
@@ -55,7 +55,7 @@
 ## **Sprint 2: Message Card Functionality**  
 
 ### **Frontend Tasks**  
-1. Design a UI for creating a message card.  
+1. Design a UI for a form to creating a message card.  
 2. Display all message cards in a list or grid format.  
 3. Add a filter to omit empty message cards in the view.  
 4. Create an admin-only view to display empty message cards upon entering a code.  
