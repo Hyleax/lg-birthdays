@@ -38,89 +38,71 @@
 ---
 
 ## **Sprint 1: Basic Group Creation and Notifications**  
-Focus on setting up foundational functionalities for managing groups and sending notifications.  
 
-### **User Stories**  
+### **Frontend Tasks**  
+1. Create a user interface to input life group member details (name, date of birth, email).  
+2. Display a confirmation page for group creation.  
+3. Design a UI for viewing member profiles.  
 
-1. **Create a Life Group**  
-   - **As a user**, I want to create a life group and add members with their name, date of birth, and email so that the group can be organized efficiently.  
-
-2. **Add Members to the Group**  
-   - **As a user**, I want to hard-code member details (name, date of birth, email) for now so that the initial data is prepared.  
-
-3. **Send Birthday Notification**  
-   - **As a system**, I want to check each member's date of birth and send an email notification 7 days before their birthday so that they feel appreciated.  
-
-4. **Generate Notification Links**  
-   - **As a system**, I want to generate a link in the email notification for members to acknowledge or respond to the message.  
+### **Backend Tasks**  
+1. Create an API endpoint to save life group and member details.  
+2. Implement logic to check members’ dates of birth and identify if a notification needs to be sent.  
+3. Generate unique notification links for each email.  
+4. Integrate with an email service provider to send notifications.  
 
 ---
 
 ## **Sprint 2: Message Card Functionality**  
-Introduce message cards where users can add or view messages.  
 
-### **User Stories**  
+### **Frontend Tasks**  
+1. Design a UI for creating a message card.  
+2. Display all message cards in a list or grid format.  
+3. Add a filter to omit empty message cards in the view.  
+4. Create an admin-only view to display empty message cards upon entering a code.  
 
-1. **Create an Empty Message Card**  
-   - **As a user**, I want to create an empty message card that everyone in the group can see so that the card can act as a shared communication space.  
-
-2. **View All Messages**  
-   - **As a user**, I want to view all message cards in the group so that I can see what has been shared.  
-
-3. **Omit Empty Messages in View**  
-   - **As a user**, I want the view to omit empty message cards so that I only see meaningful content.  
-
-4. **Check Empty Messages with Admin Code**  
-   - **As an admin**, I want to access empty message cards by entering a random alphanumeric admin code so that I can manage them if needed.  
+### **Backend Tasks**  
+1. Create an API endpoint to handle creating and saving message cards.  
+2. Implement logic to filter non-empty message cards.  
+3. Add admin verification logic to access empty cards.  
+4. Create an API endpoint to retrieve all or non-empty message cards.  
 
 ---
 
 ## **Sprint 3: Advanced Message Features and Printing**  
-Expand message card functionalities and add print options.  
 
-### **User Stories**  
+### **Frontend Tasks**  
+1. Add functionality for users to edit their own message cards.  
+2. Implement a file upload feature for adding pictures to message cards.  
+3. Display text and pictures in the message cards.  
+4. Create a printable view for non-empty message cards.  
 
-1. **Edit Own Message**  
-   - **As a user**, I want to edit only my own message card so that I can share and update my thoughts or information without interference.  
-
-2. **Add Text and Picture to Message**  
-   - **As a user**, I want to add text and a picture to my message card so that it is visually engaging.  
-
-3. **Return All Cards**  
-   - **As a system**, I want to return all message cards, including empty ones, so that I have a complete view of group activity.  
-
-4. **Return Non-Empty Cards**  
-   - **As a user**, I want to return only non-empty message cards so that I can focus on relevant content.  
-
-5. **Print Non-Empty Cards**  
-   - **As a user**, I want to print non-empty message cards so that I have a physical record of shared messages.  
+### **Backend Tasks**  
+1. Create an API endpoint to allow users to edit their message cards.  
+2. Add support for uploading and storing images associated with message cards.  
+3. Update the API endpoint to handle both text and picture updates.  
+4. Add logic to return non-empty message cards for printing.  
 
 ---
 
 ## **Sprint 4: Notifications and System Enhancements**  
-Finalize the notification process and improve system usability.  
 
-### **User Stories**  
+### **Frontend Tasks**  
+1. Add visual feedback on the notification sent to members (e.g., a status indicator).  
+2. Create a dashboard or panel for admins to monitor birthday notifications.  
+3. Add user-friendly error messages for notification-related issues.  
 
-1. **One-Time Birthday Notification**  
-   - **As a system**, I want to ensure that each member receives only one birthday notification email to avoid spamming them.  
-
-2. **Refine Notification Logic**  
-   - **As a system**, I want to accurately check if a member’s birthday is within the next 7 days so that notifications are sent on time.  
-
-3. **Usability Testing and Debugging**  
-   - **As a developer**, I want to test all functionalities comprehensively so that the system performs as expected under various scenarios.  
+### **Backend Tasks**  
+1. Implement logic to ensure each member receives only one birthday notification.  
+2. Refine the notification-sending process to check for birthdays 7 days in advance.  
+3. Perform comprehensive testing of the system’s functionality and fix any bugs.  
 
 ---
 
-## **Sprint Plan Summary**  
+## **Task Summary: Frontend vs Backend**  
 
-| Sprint  | Focus                                   | User Stories                                                                                   |
-|---------|-----------------------------------------|-----------------------------------------------------------------------------------------------|
-| Sprint 1 | Basic Group and Notification Setup    | Create a life group, add members, send birthday notifications, generate links.                |
-| Sprint 2 | Message Card Basics                   | Create message cards, view messages, omit empty cards, admin access.                          |
-| Sprint 3 | Advanced Messaging Features           | Edit messages, add text/pictures, return/print cards.                                         |
-| Sprint 4 | Notifications and System Enhancements | Refine notifications, ensure one-time emails, usability testing.                              |  
-
----
-
+| Sprint  | Frontend Tasks                                            | Backend Tasks                                               |
+|---------|-----------------------------------------------------------|------------------------------------------------------------|
+| Sprint 1 | UI for life group creation, member profile view          | APIs for saving members, sending notifications, links      |
+| Sprint 2 | Message card UI, filter for empty cards, admin-only view | APIs for message cards, filtering, and admin access        |
+| Sprint 3 | Edit message UI, image upload, printable view            | APIs for message editing, image handling, non-empty cards  |
+| Sprint 4 | Notification dashboard, user feedback                    | Logic for one-time notifications, birthday checks, testing |
